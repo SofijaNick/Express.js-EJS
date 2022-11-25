@@ -1,0 +1,16 @@
+<%- include('partials/head') %>
+
+    <%- include('partials/navbar') %>
+
+        <div class="container">
+        
+            <h1> Welcome to <%= name %></h1>
+            <h2><%= description %></h2>
+            <p><%= subscribers %> subscribers</p>
+            <% for(let i = 0; i < posts.length; i++){ %>
+                <img src="<%= posts[i].img %>" alt="">
+                <p><%= posts[i].title %> - <%= posts[i].author %></p>
+            <% } %>
+
+        </div>
+<%- include('partials/footer') %>
